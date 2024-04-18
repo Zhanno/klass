@@ -1,0 +1,53 @@
+#Задание 1
+import numpy as np
+np.random.seed(0)
+A = np.random.randint(-10, 10, size=(7, 4))
+print("Матрица A(7,4):")
+print(A)
+positive_sums = np.sum(np.maximum(A, 0), axis=1)
+print("\nОдномерный массив из сумм положительных элементов каждой строки матрицы:")
+print(positive_sums)
+
+#Задание 2
+import numpy as np
+np.random.seed(1)
+M, N = 5, 3 
+A = np.random.randint(1, 10, size=(M, N))
+print("Матрица A({},{})".format(M, N))
+print(A)
+column_means = np.mean(A, axis=0)
+print("\nОдномерный массив из средних арифметических каждого столбца матрицы:")
+print(column_means)
+
+#Задание 3
+import numpy as np
+np.random.seed(1)
+M, N = 4, 5
+A = np.random.randint(0, 10, size=(M, N))
+print("Матрица A({},{})".format(M, N))
+print(A)
+nonzero_counts = np.count_nonzero(A, axis=1)
+print("\nОдномерный массив из количества ненулевых элементов каждой строки матрицы:")
+print(nonzero_counts)
+
+#Задание 4
+import numpy as np
+np.random.seed(2)
+M, N = 3, 4 
+B = np.random.randint(-10, 10, size=(M, N))
+print("Матрица B({},{})".format(M, N))
+print(B)
+neg_product = np.prod(B[B < 0], axis=0)
+print("\nОдномерный массив из произведений отрицательных элементов каждого столбца матрицы:")
+print(neg_product)
+
+#Задание 5
+import numpy as np
+np.random.seed(3)
+M, N = 4, 3
+A = np.random.randint(1, 20, size=(M, N))
+print("Матрица A({},{})".format(M, N))
+print(A)
+min_elements = np.min(A, axis=1)
+print("\nОдномерный массив из минимальных элементов каждой строки матрицы:")
+print(min_elements)
